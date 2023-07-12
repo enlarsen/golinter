@@ -1,0 +1,18 @@
+globalComponents:
+  # component shorthand to map <custom-image> to <img> and map over all attributes
+  custom-image: img 
+
+  # long-form mapping
+  custom-button:
+    element: button
+    attributes:
+      - value: <text>
+      - aria-*
+
+  # multiple elements
+  custom-input:
+    - el: input
+    - 
+      el: label
+      attrs: 
+        - value: '<text>'

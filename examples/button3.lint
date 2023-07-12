@@ -1,0 +1,20 @@
+--- button.json
+{
+}
+
+--- button.html
+<button aria-label="Cancel"></button>
+
+
+
+--- request.json
+{
+  "filename": "button.html",
+  "source": "<button aria-label=\"Cancel\"></button>\n\n\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

@@ -1,0 +1,37 @@
+--- c-image.json
+{
+  "globalComponents": {
+    "custom-image": "img"
+  }
+}
+
+--- c-image.html
+<custom-image src="path/to/image.jpg"></custom-image>
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-image": "img"
+    }
+  },
+  "filename": "c-image.html",
+  "source": "<custom-image src=\"path/to/image.jpg\"></custom-image>\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+        "endColumn": 54,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/image-alt?application=axe-linter",
+        "lineContent": "<custom-image src=\"path/to/image.jpg\"></custom-image>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "image-alt"
+      }
+    ]
+  }
+}

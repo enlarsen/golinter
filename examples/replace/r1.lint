@@ -1,0 +1,34 @@
+--- config.json
+{
+  "globalComponents": {
+    "replace": "true",
+    "custom-listitem": {
+      "element": "li"
+    }
+  }
+}
+--- replace.html
+<ul>
+  <custom-listitem>Item 1</custom-listitem>
+  <custom-listitem>Item 2</custom-listitem>
+</ul>
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-listitem": {
+        "element": "li"
+      },
+      "replace": "true"
+    }
+  },
+  "filename": "replace.html",
+  "source": "<ul>\n  <custom-listitem>Item 1</custom-listitem>\n  <custom-listitem>Item 2</custom-listitem>\n</ul>\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

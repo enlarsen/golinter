@@ -1,0 +1,22 @@
+<style>
+.search {
+/*  background: bisque;*/
+  font-family: sans-serif;
+}
+#foo { user-select:none; }
+</style>
+
+<script src="search-box.js"></script>
+
+<p id="foo">Testing, testing</p>
+
+<search-box class="search" value="foobar" size=20 placeholder="Search...">
+</search-box>
+<p>Testing, testing</p>
+
+<button onclick="changeSize()">Change size</button>
+<button onclick="changePlaceholder()">Change placeholder</button>
+<button onclick="changeValue()">Change value</button>
+<button onclick="hide()">Disable</button>
+<button onclick="show()">Enable<button>
+

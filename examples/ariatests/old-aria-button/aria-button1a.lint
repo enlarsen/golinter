@@ -1,0 +1,17 @@
+--- config.json
+{
+}
+--- button-aria.html
+<custom-button aria-controls="expand-region" aria-expanded="false" message="Show Region"></custom-button>
+<div id="expand-region" role="region">Some content</div>
+--- request.json
+{
+  "filename": "button-aria.html",
+  "source": "<custom-button aria-controls=\"expand-region\" aria-expanded=\"false\" message=\"Show Region\"></custom-button>\n<div id=\"expand-region\" role=\"region\">Some content</div>\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

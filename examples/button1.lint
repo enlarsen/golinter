@@ -1,0 +1,26 @@
+--- button.json
+{
+    "globalComponents": {
+    }
+}
+
+
+
+--- button.html
+<button>Cancel</button>
+
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {}
+  },
+  "filename": "button.html",
+  "source": "<button>Cancel</button>\n\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

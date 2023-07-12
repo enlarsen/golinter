@@ -1,0 +1,31 @@
+<html lang="en-US">
+  <head>
+    <title>hi from #1</title>
+    <script>
+      customElements.define(
+        "custom-image",
+        class extends HTMLElement {
+          constructor() {
+            super();
+          }
+
+          connectedCallback() {
+            this.innerHTML = `<img src="${this.getAttribute(
+              "src"
+            )}" alt="${this.getAttribute("alt")}"/>`;
+          }
+        }
+      );
+    </script>
+  </head>
+
+  <body>
+    <custom-image
+      src="/path/to/img1.png"
+      alt="description of image"
+    ></custom-image>
+    <custom-image src="/path/to/img2.png"></custom-image>
+
+    <img src="somefile.jpg" />
+  </body>
+</html>

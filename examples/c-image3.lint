@@ -1,0 +1,40 @@
+--- c-image.json
+{
+  "globalComponents": {
+     "custom-image": {
+        "element": "img",
+        "attributes": [
+        {
+           "alternative-text": "alt"
+        }
+     ]
+   }
+  }
+}
+
+--- c-image.html
+<custom-image src="path/to/image.jpg" alternative-text="alt text"></custom-image>
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-image": {
+        "attributes": [
+          {
+            "alternative-text": "alt"
+          }
+        ],
+        "element": "img"
+      }
+    }
+  },
+  "filename": "c-image.html",
+  "source": "<custom-image src=\"path/to/image.jpg\" alternative-text=\"alt text\"></custom-image>\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

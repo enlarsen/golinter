@@ -1,0 +1,16 @@
+--- c-image.json
+{
+}
+--- c-image.html
+<custom-image src="path/to/image.jpg"/>
+--- request.json
+{
+  "filename": "c-image.html",
+  "source": "<custom-image src=\"path/to/image.jpg\"/>\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

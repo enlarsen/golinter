@@ -1,0 +1,28 @@
+--- c-button.json
+{
+    "globalComponents": {
+        "custom-button": {
+           "element": "button"
+          }
+    }
+}
+--- c-button.html
+<custom-button aria-label="blah"></custom-button>
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-button": {
+        "element": "button"
+      }
+    }
+  },
+  "filename": "c-button.html",
+  "source": "<custom-button aria-label=\"blah\"></custom-button>\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

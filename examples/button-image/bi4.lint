@@ -1,0 +1,36 @@
+--- config.json
+{
+  "globalComponents": {
+    "button-image": "img",
+    "button-image": "button"
+ }
+}
+--- button-image.html
+<button-image foo="hi"></button-image>
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "button-image": "button"
+    }
+  },
+  "filename": "button-image.html",
+  "source": "<button-image foo=\"hi\"></button-image>\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures buttons have discernible text",
+        "endColumn": 39,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/button-name?application=axe-linter",
+        "lineContent": "<button-image foo=\"hi\"></button-image>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "button-name"
+      }
+    ]
+  }
+}

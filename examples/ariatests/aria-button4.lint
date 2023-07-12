@@ -1,0 +1,45 @@
+--- config.json
+{
+  "globalComponents": {
+     "custom-button": "button"
+   }   
+}
+--- aria-button.html
+<custom-button aria-controls="expand-region" aria-expanded="false" aria-colindex="1" message="Show Region"></custom-button>
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-button": "button"
+    }
+  },
+  "filename": "aria-button.html",
+  "source": "<custom-button aria-controls=\"expand-region\" aria-expanded=\"false\" aria-colindex=\"1\" message=\"Show Region\"></custom-button>\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures ARIA attributes are allowed for an element's role",
+        "endColumn": 124,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/aria-allowed-attr?application=axe-linter",
+        "lineContent": "<custom-button aria-controls=\"expand-region\" aria-expanded=\"false\" aria-colindex=\"1\" message=\"Show Region\"></custom-button>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "aria-allowed-attr"
+      },
+      {
+        "column": 1,
+        "description": "Ensures buttons have discernible text",
+        "endColumn": 124,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/button-name?application=axe-linter",
+        "lineContent": "<custom-button aria-controls=\"expand-region\" aria-expanded=\"false\" aria-colindex=\"1\" message=\"Show Region\"></custom-button>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "button-name"
+      }
+    ]
+  }
+}

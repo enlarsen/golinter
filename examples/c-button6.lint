@@ -1,0 +1,49 @@
+--- c-button.json
+{
+    "globalComponents": {
+        "custom-button": {
+          "element": "button",
+          "attributes": [
+            "aria-*"
+          ]
+        }
+    }
+}
+
+
+--- c-button.html
+<custom-button label="blah"></custom-button>
+
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-button": {
+        "attributes": [
+          "aria-*"
+        ],
+        "element": "button"
+      }
+    }
+  },
+  "filename": "c-button.html",
+  "source": "<custom-button label=\"blah\"></custom-button>\n\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures buttons have discernible text",
+        "endColumn": 45,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/button-name?application=axe-linter",
+        "lineContent": "<custom-button label=\"blah\"></custom-button>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "button-name"
+      }
+    ]
+  }
+}

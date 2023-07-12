@@ -1,0 +1,32 @@
+--- button.json
+{
+}
+
+
+
+--- button.html
+<button></button>
+
+
+--- request.json
+{
+  "filename": "button.html",
+  "source": "<button></button>\n\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures buttons have discernible text",
+        "endColumn": 18,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/button-name?application=axe-linter",
+        "lineContent": "<button></button>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "button-name"
+      }
+    ]
+  }
+}

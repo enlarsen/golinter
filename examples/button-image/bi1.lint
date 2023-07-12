@@ -1,0 +1,17 @@
+--- config.json
+{
+}
+--- button-image.html
+<button-image alternative-text="alternative text" message="message"></button-image>
+
+--- request.json
+{
+  "filename": "button-image.html",
+  "source": "<button-image alternative-text=\"alternative text\" message=\"message\"></button-image>\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

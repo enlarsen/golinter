@@ -1,0 +1,27 @@
+--- bad1.json
+{
+}
+
+
+
+--- bad1.html
+<img src="path/to/image.jpg"/>
+
+
+--- results.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+        "endColumn": 31,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/image-alt?application=axe-linter",
+        "lineContent": "<img src=\"path/to/image.jpg\"/>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "image-alt"
+      }
+    ]
+  }
+}

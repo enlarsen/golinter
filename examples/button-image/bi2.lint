@@ -1,0 +1,55 @@
+--- config.json
+{
+  "globalComponents": {
+    "button-image": [
+      {
+        "element": "img",
+        "attributes": [
+          { "alternative-text": "alt" }
+        ]
+      },
+     {
+        "element": "button",
+        "attributes": [
+           { "message": "<text>" }
+         ]
+     }
+   ]
+ }
+}
+--- button-image.html
+<button-image alternative-text="alternative text" message="message"></button-image>
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "button-image": [
+        {
+          "attributes": [
+            {
+              "alternative-text": "alt"
+            }
+          ],
+          "element": "img"
+        },
+        {
+          "attributes": [
+            {
+              "message": "\u003ctext\u003e"
+            }
+          ],
+          "element": "button"
+        }
+      ]
+    }
+  },
+  "filename": "button-image.html",
+  "source": "<button-image alternative-text=\"alternative text\" message=\"message\"></button-image>\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": null
+  }
+}

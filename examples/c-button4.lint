@@ -1,0 +1,38 @@
+--- c-button.json
+{
+    "globalComponents": {
+        "custom-button": {
+          "element": "button",
+          "attributes": [
+            { "label": "<text>" }
+          ]
+        }
+    }
+}
+
+--- c-button.html
+<custom-button label="blah"></custom-button>
+
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-button": {
+        "attributes": [
+          {
+            "label": "\u003ctext\u003e"
+          }
+        ],
+        "element": "button"
+      }
+    }
+  },
+  "filename": "c-button.html",
+  "source": "<custom-button label=\"blah\"></custom-button>\n\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": []
+  }
+}

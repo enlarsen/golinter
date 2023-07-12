@@ -1,0 +1,46 @@
+--- config.json
+{
+  "globalComponents": {
+     "custom-button": {
+        "element": "button",
+        "attributes" : [
+          "aria-*"
+        ]
+     }
+  }
+}
+--- button-aria.html
+<custom-button id="button1" aria-colindex="1" aria-controls="expand-region" aria-expanded="false">Show Region</custom-button>
+<div id="expand-region" role="region">Some content</div>
+--- request.json
+{
+  "config": {
+    "globalComponents": {
+      "custom-button": {
+        "attributes": [
+          "aria-*"
+        ],
+        "element": "button"
+      }
+    }
+  },
+  "filename": "button-aria.html",
+  "source": "<custom-button id=\"button1\" aria-colindex=\"1\" aria-controls=\"expand-region\" aria-expanded=\"false\">Show Region</custom-button>\n<div id=\"expand-region\" role=\"region\">Some content</div>\n"
+}
+--- response.json
+{
+  "report": {
+    "errors": [
+      {
+        "column": 1,
+        "description": "Ensures ARIA attributes are allowed for an element's role",
+        "endColumn": 126,
+        "helpURL": "https://dequeuniversity.com/rules/axe/4.4/aria-allowed-attr?application=axe-linter",
+        "lineContent": "<custom-button id=\"button1\" aria-colindex=\"1\" aria-controls=\"expand-region\" aria-expanded=\"false\">Show Region</custom-button>",
+        "lineNumber": 1,
+        "linterType": "html",
+        "ruleId": "aria-allowed-attr"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "globalComponents": {
+    "custom-image": "img",
+    "custom-button": {
+      "element": "button",
+      "attributes": [
+        {
+          "value": "<text>"
+        },
+        "aria-*"
+      ]
+    },
+    "custom-input": [
+      {
+        "el": "input"
+      },
+      {
+        "el": "label",
+        "attrs": [
+          {
+            "value": "<text>"
+          }
+        ]
+      }
+    ]
+  }
+}
